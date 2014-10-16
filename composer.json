@@ -1,0 +1,30 @@
+{
+    "name": "black/organization",
+    "type": "library",
+    "description": "PHP 5.4+ library to make working with Address safer, easier, and fun",
+    "keywords": ["libary", "black-project", "organization"],
+    "homepage": "http://www.lablackroom.com",
+    "license": "MIT",
+    "authors": [
+        {
+            "name": "Alexandre 'pocky' Balmes",
+            "email": "alexandre@lablackroom.com",
+            "homepage": "http://www.lablackroom.com"
+        }
+    ],
+    "autoload": {
+        "psr-4": {
+            "Organization\\": "src/Organization/"
+        }
+    },
+    "require": {
+        "php": ">=5.4.0",
+        "black/common": "~1.0"
+    },
+    "require-dev": {
+        "phpspec/phpspec": "~2.0"
+    },
+    "config": {
+        "bin-dir": "bin"
+    }
+}
