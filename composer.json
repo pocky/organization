@@ -14,7 +14,7 @@
     ],
     "autoload": {
         "psr-4": {
-            "Organization\\": "src/Organization/"
+            "Black\\Component\\Organization\\": "src/Black/Component/Organization/"
         }
     },
     "require": {
