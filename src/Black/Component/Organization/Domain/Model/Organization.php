@@ -65,35 +65,13 @@ class Organization implements Entity
     /**
      * @param OrganizationId $organizationId
      * @param $name
-     * @param $logo
-     * @param $image
-     * @param $email
-     * @param $faxNumber
-     * @param $telephone
-     * @param $vatId
-     * @param \DateTime $foundingDate
      */
     public function __construct(
         OrganizationId $organizationId,
-        $name,
-        $logo,
-        $image,
-        $email,
-        $faxNumber,
-        $telephone,
-        $vatId,
-        \DateTime $foundingDate
+        $name
     ) {
         $this->organizationId  = $organizationId;
         $this->name            = $name;
-        $this->logo            = $logo;
-        $this->image           = $image;
-        $this->email           = $email;
-        $this->faxNumber       = $faxNumber;
-        $this->telephone       = $telephone;
-        $this->vatId           = $vatId;
-        $this->foundingDate    = $foundingDate;
-        $this->dissolutionDate = null;
     }
 
     /**
@@ -101,7 +79,7 @@ class Organization implements Entity
      */
     public function getOrganizationId()
     {
-        return $this->organizationId->getValue();
+        return $this->organizationId;
     }
 
     /**
@@ -169,7 +147,8 @@ class Organization implements Entity
     }
 
     /**
-     * @param \DateTime $dateTime
+     * @param \DateTime $disolvedDate
+     * @throws \Exception
      */
     public function disolve(\DateTime $disolvedDate)
     {
